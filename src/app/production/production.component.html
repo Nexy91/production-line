@@ -1,7 +1,7 @@
 <div class="wrapper fade-in">
   <main>
     <production-navigation [navigation]="productionLine"></production-navigation>
-    <div class="production-line">
+    <div class="production-line scale-in-center">
       <hr>
       <div class="station {{station.status}}" *ngFor="let station of productionLine">
         <div class="content">
@@ -9,7 +9,7 @@
           <div>{{station.title | titlecase}}</div>
         </div>
         <div class="status">
-          <span class="main-icon material-symbols-outlined">
+          <span class="main-icon material-symbols-outlined {{station.status}}-icon">
             <ng-container *ngIf="station.status === 'ok'">settings_backup_restore</ng-container>
             <ng-container *ngIf="station.status !== 'ok'">{{station.status}}</ng-container>
           </span>

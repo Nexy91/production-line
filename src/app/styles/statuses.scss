@@ -4,6 +4,10 @@
   background-color: $status-ok;
 }
 
+.ok-icon {
+  color: green;
+}
+
 .warning {
   background-color: $status-warning;
   color: white;

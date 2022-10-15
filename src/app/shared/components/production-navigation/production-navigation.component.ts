@@ -1,4 +1,4 @@
-import { IProductionStationNode } from '../../interfaces/production-station.interface';
+import { ISection } from '../../interfaces/section.interface';
 import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'production-navigation',
@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./production-navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  @Input() navigation: IProductionStationNode[] = [];
+  @Input() navigation: ISection[] = [];
 
   constructor() { }
   public ngOnInit(): void { }

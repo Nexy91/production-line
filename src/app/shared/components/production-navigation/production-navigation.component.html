@@ -2,7 +2,7 @@
   <div *ngFor="let station of navigation" class="process {{station.status}}">
     {{station.title | titlecase}}
     <div class="icon">
-      <span class="material-symbols-outlined">
+      <span class="material-symbols-outlined {{station.status}}-icon">
         <ng-container *ngIf="station.status === 'ok'">settings_backup_restore</ng-container>
         <ng-container *ngIf="station.status !== 'ok'">{{station.status}}</ng-container>
       </span>

@@ -1,5 +1,5 @@
-import { IProductionStationStatus } from '../shared/enums/production-station-status.enum';
-import { IProductionStationNode } from '../shared/interfaces/production-station.interface';
+import { ISectionStatus } from '../shared/enums/section-status.enum';
+import { ISection } from '../shared/interfaces/section.interface';
 import { AppService } from '../shared/services/app.service';
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -8,26 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./production.component.scss']
 })
 export class ProductionComponent implements OnInit {
-  public productionLine: IProductionStationNode[] = [
+  public productionLine: ISection[] = [
     {
       title: 'scale',
+      section: 'Scale',
       icon: 'system_update_alt',
-      status: IProductionStationStatus.Ok
+      status: ISectionStatus.Running
     },
     {
       title: 'attacher',
+      section: 'Bag Attach',
       icon: 'chrome_reader_mode',
-      status: IProductionStationStatus.Error
+      status: ISectionStatus.Alarm
     },
     {
       title: 'packer',
+      section: 'Packer',
       icon: 'call_to_action',
-      status: IProductionStationStatus.Ok
+      status: ISectionStatus.Running
     },
     {
       title: 'closer',
+      section: 'Bag Closer',
       icon: 'grid_on',
-      status: IProductionStationStatus.Warning
+      status: ISectionStatus.Warning
     }
   ];
 

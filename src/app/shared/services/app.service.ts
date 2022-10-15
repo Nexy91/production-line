@@ -12,5 +12,12 @@ export class AppService {
 
   public switchSimulator() {
     this.simulatorRun = !this.simulatorRun;
+    if (this.simulatorRun) {
+      this.runSimulation();
+    }
+  }
+
+  private runSimulation() {
+
   }
 }
