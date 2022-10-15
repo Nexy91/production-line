@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { IProductionStationStatus } from '../shared/enums/production-station-status.enum';
 import { IProductionStationNode } from '../shared/interfaces/production-station.interface';
 import { AppService } from '../shared/services/app.service';
-
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-production',
   templateUrl: './production.component.html',
@@ -12,30 +11,29 @@ export class ProductionComponent implements OnInit {
   public productionLine: IProductionStationNode[] = [
     {
       title: 'scale',
-      icon: 'alarm',
+      icon: 'system_update_alt',
       status: IProductionStationStatus.Ok
     },
     {
       title: 'attacher',
-      icon: 'alarm',
+      icon: 'chrome_reader_mode',
       status: IProductionStationStatus.Error
     },
     {
       title: 'packer',
-      icon: 'alarm',
+      icon: 'call_to_action',
       status: IProductionStationStatus.Ok
     },
     {
       title: 'closer',
-      icon: 'alarm',
+      icon: 'grid_on',
       status: IProductionStationStatus.Warning
     }
   ];
 
   constructor(private _app: AppService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this._app.switchHeaderFooter(true);
   }
-
 }

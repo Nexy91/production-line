@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
 import { IProductionStationNode } from '../../interfaces/production-station.interface';
+import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'production-navigation',
   templateUrl: './production-navigation.component.html',
@@ -9,8 +9,5 @@ export class NavigationComponent implements OnInit {
   @Input() navigation: IProductionStationNode[] = [];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  public ngOnInit(): void { }
 }

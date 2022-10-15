@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../services/app.service';
-
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,5 +11,5 @@ export class HeaderComponent implements OnInit {
   constructor(public _app: AppService) {
     setInterval(() => { this.now = new Date(); }, 1);
   }
-  ngOnInit(): void { }
+  public ngOnInit(): void { }
 }
