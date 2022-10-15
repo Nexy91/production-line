@@ -1,9 +1,7 @@
 :host {
-  --background: #ececec;
-
   .wrapper {
     display: flex;
-    background-color: var(--background);
-    height: 100vh;
+    background-color: white;
+    height: 100%;
   }
 }

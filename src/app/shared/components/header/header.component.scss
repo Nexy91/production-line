@@ -1,0 +1,30 @@
+@import "./../../../styles/colors.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: $background-gray;
+  border-bottom: 5px solid #01a89c;
+  padding: 10px 15px;
+
+  img {
+    width: 200px;
+  }
+
+  .box {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+
+    div {
+      margin-left: 60px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 10px;
+        font-size: 30px;
+      }
+    }
+  }
+}

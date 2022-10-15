@@ -1,12 +1,12 @@
-:host {
-  --background: #3b405b;
+@import "../styles/colors.scss";
 
+:host {
   .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--background);
+    background-color: $background-dark;
 
     .box {
       margin: 0px 15px;

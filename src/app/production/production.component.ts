@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../shared/services/app.service';
 
 @Component({
   selector: 'app-production',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _app: AppService) { }
 
   ngOnInit(): void {
+    this._app.switchHeaderFooter(true);
   }
 
 }
