@@ -11,19 +11,23 @@ import { AppService } from '../shared/services/app.service';
 export class ProductionComponent implements OnInit {
   public productionLine: IProductionStationNode[] = [
     {
-      title: 'Scale',
+      title: 'scale',
+      icon: 'alarm',
       status: IProductionStationStatus.Ok
     },
     {
-      title: 'Attacher',
+      title: 'attacher',
+      icon: 'alarm',
       status: IProductionStationStatus.Error
     },
     {
-      title: 'Packer',
+      title: 'packer',
+      icon: 'alarm',
       status: IProductionStationStatus.Ok
     },
     {
-      title: 'Closer',
+      title: 'closer',
+      icon: 'alarm',
       status: IProductionStationStatus.Warning
     }
   ];

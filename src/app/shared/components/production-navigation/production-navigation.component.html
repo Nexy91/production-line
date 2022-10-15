@@ -1,11 +1,10 @@
 <div class="wrapper">
   <div *ngFor="let station of navigation" class="process {{station.status}}">
-    {{station.title}}
+    {{station.title | titlecase}}
     <div class="icon">
       <span class="material-symbols-outlined">
         <ng-container *ngIf="station.status === 'ok'">settings_backup_restore</ng-container>
-        <ng-container *ngIf="station.status === 'warning'">warning</ng-container>
-        <ng-container *ngIf="station.status === 'error'">error</ng-container>
+        <ng-container *ngIf="station.status !== 'ok'">{{station.status}}</ng-container>
       </span>
     </div>
   </div>

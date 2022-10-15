@@ -1,4 +1,5 @@
 @import "./../../../styles/colors.scss";
+@import "./../../../styles/statuses.scss";
 
 .wrapper {
   display: flex;
@@ -16,19 +17,5 @@
       margin-left: 20px;
       margin-top: -10px;
     }
-  }
-
-  .ok {
-    background-color: $status-ok;
-  }
-
-  .warning {
-    background-color: $status-warning;
-    color: white;
-  }
-
-  .error {
-    background-color: $status-error;
-    color: white;
   }
 }

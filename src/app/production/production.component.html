@@ -1,4 +1,20 @@
 <div class="wrapper fade-in">
-  <production-navigation [navigation]="productionLine"></production-navigation>
-
+  <main>
+    <production-navigation [navigation]="productionLine"></production-navigation>
+    <div class="production-line">
+      <hr>
+      <div class="station {{station.status}}" *ngFor="let station of productionLine">
+        <div class="content">
+          <div><span class="main-icon material-symbols-outlined">{{station.icon}}</span></div>
+          <div>{{station.title | titlecase}}</div>
+        </div>
+        <div class="status">
+          <span class="main-icon material-symbols-outlined">
+            <ng-container *ngIf="station.status === 'ok'">settings_backup_restore</ng-container>
+            <ng-container *ngIf="station.status !== 'ok'">{{station.status}}</ng-container>
+          </span>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>

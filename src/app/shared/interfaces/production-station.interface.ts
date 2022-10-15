@@ -2,5 +2,6 @@ import { IProductionStationStatus } from '../enums/production-station-status.enu
 
 export interface IProductionStationNode {
   title: string;
+  icon: string;
   status: IProductionStationStatus;
 }

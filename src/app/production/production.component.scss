@@ -1,11 +1,60 @@
+@import "./../styles/statuses.scss";
+
 :host {
   .wrapper {
     display: flex;
     background-color: white;
     height: 100%;
 
-    production-navigation {
+    main {
       width: 100%;
+
+      .production-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100% - 54px);
+
+        hr {
+          width: 710px;
+          z-index: -1;
+          position: absolute;
+          border: 2px solid #2c9c09;
+        }
+
+        .station {
+          height: 200px;
+          width: 200px;
+          margin: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 27px;
+          font-weight: 500;
+          border-radius: 5px;
+          border: $border-full-gray;
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .main-icon {
+              font-size: 90px;
+            }
+          }
+
+          .status {
+            position: absolute;
+            margin-left: 150px;
+            margin-top: -150px;
+
+            span {
+              font-size: 30px;
+            }
+          }
+        }
+      }
     }
   }
 }

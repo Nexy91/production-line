@@ -1,0 +1,15 @@
+@import "./colors.scss";
+
+.ok {
+  background-color: $status-ok;
+}
+
+.warning {
+  background-color: $status-warning;
+  color: white;
+}
+
+.error {
+  background-color: $status-error;
+  color: white;
+}
