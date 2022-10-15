@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'production',
-    loadChildren: () => import('./production/production.module').then(m => m.ProductionModule)
+    loadChildren: () => import('./overview/overview.module').then(m => m.ProductionModule)
   },
   {
     path: "**",

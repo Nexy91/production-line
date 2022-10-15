@@ -5,10 +5,10 @@ import { AppService } from '../shared/services/app.service';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-production',
-  templateUrl: './production.component.html',
-  styleUrls: ['./production.component.scss']
+  templateUrl: './overview.component.html',
+  styleUrls: ['./overview.component.scss']
 })
-export class ProductionComponent implements OnInit {
+export class OverviewComponent implements OnInit {
   public productionLine: ISection[] = [
     {
       title: 'scale',

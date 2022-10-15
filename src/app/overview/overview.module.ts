@@ -1,12 +1,12 @@
-import { ProductionComponent } from './production.component';
+import { OverviewComponent } from './overview.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-const routes: Routes = [{ path: '', component: ProductionComponent }]
+const routes: Routes = [{ path: '', component: OverviewComponent }]
 @NgModule({
-  declarations: [ProductionComponent],
+  declarations: [OverviewComponent],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
