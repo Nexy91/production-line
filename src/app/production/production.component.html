@@ -3,16 +3,16 @@
     <production-navigation [navigation]="productionLine"></production-navigation>
     <div class="production-line scale-in-center">
       <hr>
-      <div class="station {{station.status}}" *ngFor="let station of productionLine">
-        <div class="content">
-          <div><span class="main-icon material-symbols-outlined">{{station.icon}}</span></div>
-          <div>{{station.title | titlecase}}</div>
-        </div>
+      <div class="section {{section.status}}" *ngFor="let section of productionLine">
         <div class="status">
-          <span class="main-icon material-symbols-outlined {{station.status}}-icon">
-            <ng-container *ngIf="station.status === 'ok'">settings_backup_restore</ng-container>
-            <ng-container *ngIf="station.status !== 'ok'">{{station.status}}</ng-container>
+          <span class="main-icon material-symbols-outlined {{section.status}}-icon">
+            <ng-container *ngIf="section.status === 'ok'">settings_backup_restore</ng-container>
+            <ng-container *ngIf="section.status !== 'ok'">{{section.status}}</ng-container>
           </span>
+        </div>
+        <div class="content">
+          <div><span class="main-icon material-symbols-outlined">{{section.icon}}</span></div>
+          <div>{{section.title | titlecase}}</div>
         </div>
       </div>
     </div>
