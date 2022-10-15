@@ -1,0 +1,34 @@
+@import "./../../../styles/colors.scss";
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  background: $background-gray;
+  border-bottom: 1px solid gainsboro;
+
+  .process {
+    padding: 15px 50px;
+    padding-right: 6px;
+    font-size: 20px;
+    display: flex;
+
+    .icon {
+      margin-left: 20px;
+      margin-top: -10px;
+    }
+  }
+
+  .ok {
+    background-color: $status-ok;
+  }
+
+  .warning {
+    background-color: $status-warning;
+    color: white;
+  }
+
+  .error {
+    background-color: $status-error;
+    color: white;
+  }
+}

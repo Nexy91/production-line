@@ -1,1 +1,12 @@
-<p>navigation works!</p>
+<div class="wrapper">
+  <div *ngFor="let station of navigation" class="process {{station.status}}">
+    {{station.title}}
+    <div class="icon">
+      <span class="material-symbols-outlined">
+        <ng-container *ngIf="station.status === 'ok'">settings_backup_restore</ng-container>
+        <ng-container *ngIf="station.status === 'warning'">warning</ng-container>
+        <ng-container *ngIf="station.status === 'error'">error</ng-container>
+      </span>
+    </div>
+  </div>
+</div>
