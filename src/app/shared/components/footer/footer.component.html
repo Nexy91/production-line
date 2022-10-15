@@ -1,9 +1,9 @@
 <footer class="wrapper fade-in" *ngIf="_app.showFooter">
-  <div (click)="_app.switchSimulator();">
-    <ng-container *ngIf="!_app.simulatorRun">
+  <div (click)="_simulator.switchSimulator();">
+    <ng-container *ngIf="!_simulator.simulatorRun">
       <span class="material-symbols-outlined">play_circle</span>Play simulation
     </ng-container>
-    <ng-container *ngIf="_app.simulatorRun">
+    <ng-container *ngIf="_simulator.simulatorRun">
       <span class="material-symbols-outlined">stop_circle</span>Stop simulation
     </ng-container>
   </div>

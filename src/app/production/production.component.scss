@@ -22,6 +22,10 @@
           border: 2px solid #2c9c09;
         }
 
+        .line-stopped {
+          border-style: dotted;
+        }
+
         .section {
           height: 200px;
           width: 200px;
@@ -34,6 +38,7 @@
           font-weight: 500;
           border-radius: 5px;
           border: $border-full-gray;
+          transition: 0.2s;
 
           .content {
             display: flex;

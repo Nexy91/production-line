@@ -1,3 +1,4 @@
+import { SimulatorService } from '../shared/services/simulator.service';
 import { ISectionStatus } from '../shared/enums/section-status.enum';
 import { ISection } from '../shared/interfaces/section.interface';
 import { AppService } from '../shared/services/app.service';
@@ -35,9 +36,10 @@ export class ProductionComponent implements OnInit {
     }
   ];
 
-  constructor(private _app: AppService) { }
+  constructor(private _app: AppService, public _simulator: SimulatorService) { }
 
   public ngOnInit(): void {
     this._app.switchHeaderFooter(true);
+    this._simulator.productionLine = this.productionLine;
   }
 }
